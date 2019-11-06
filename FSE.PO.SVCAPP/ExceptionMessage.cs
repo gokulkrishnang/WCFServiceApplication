@@ -24,5 +24,7 @@ namespace FSE.PO.SVCAPP
             get { return this.infoExceptionMessage; }
             set { this.infoExceptionMessage = value; }
         }
+
+        //Comment included for FSE GIT assignment
     }
 }
