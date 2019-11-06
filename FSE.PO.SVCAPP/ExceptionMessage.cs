@@ -13,7 +13,7 @@ namespace FSE.PO.SVCAPP
     {
         private string infoExceptionMessage;
 
-        //Parameter Constructor
+        //Parameter Constructor 
         public ExceptionMessage(string Message)
         {
             this.infoExceptionMessage = Message;
