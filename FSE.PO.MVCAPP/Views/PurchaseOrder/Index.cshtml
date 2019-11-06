@@ -1,0 +1,62 @@
+﻿@using FSE.PO.MVCAPP.PurchaseOrderService;
+@model List<PurchaseOrderEntity>
+
+@*<script src="~/Scripts/bootstrap.min.js"></script>*@
+<script src="~/Scripts/jquery-2.1.3.min.js"></script>
+<style type="text/css">
+    .alignCentre {
+            text-align: center;
+        }
+</style>
+
+@{
+    ViewBag.Title = "FSE assignment :: Purchase Order System";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>(POS) Purchase Order System</h2>
+
+<br />
+<h5>@Html.ActionLink("(+) New Purchase Order", "Insert")</h5>
+<br />
+
+@{
+        if (Model.Count > 0) {
+
+            <table class="table table-striped table-bordered table-responsive table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th class="alignCentre">PO No</th>
+                        <th class="alignCentre">Supplier No</th>
+                        <th class="alignCentre">Supplier Name</th>
+                        <th class="alignCentre">Item Code</th>
+                        <th class="alignCentre">Item Description</th>
+                        <th class="alignCentre">Quantity</th>
+                        <th class="alignCentre">Purchase Date</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                @foreach (PurchaseOrderEntity purchaseOrderEntity in Model)
+                {
+            <tr>
+                <td>@purchaseOrderEntity.PONo.ToString()</td>
+                <td>@purchaseOrderEntity.SuplNo.ToString()</td>
+                <td>@purchaseOrderEntity.SuplName.ToString()</td>
+                <td>@purchaseOrderEntity.ITCode.ToString()</td>
+                <td>@purchaseOrderEntity.ITDesc.ToString()</td>
+                <td>@purchaseOrderEntity.Qty.ToString()</td>
+                <td>@purchaseOrderEntity.PODate.ToString()</td>              
+                <td>
+                    <a href="@Url.Action("Edit", "PurchaseOrder", new { @poNo = @purchaseOrderEntity.PONo.ToString() })">Edit</a> |
+                    <a href="@Url.Action("Delete", "PurchaseOrder", new { @poNo = @purchaseOrderEntity.PONo.ToString() })">Delete</a>
+                </td>
+            </tr>
+                }
+            </table>
+        }
+        else {
+
+            <span> Purchase Order (PO) records are not created </span>
+        }
+    }
+

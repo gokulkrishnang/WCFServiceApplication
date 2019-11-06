@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSE.PO.MVCAPP2", "FSE.PO.MVCAPP2\FSE.PO.MVCAPP2.csproj", "{16813281-7AA7-400A-9F77-BAA9AA287D71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSE.PO.MVCAPP", "FSE.PO.MVCAPP\FSE.PO.MVCAPP.csproj", "{2ACEF926-AD88-462D-8145-A813AA4D144D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSE.PO.SVCAPP", "FSE.PO.SVCAPP\FSE.PO.SVCAPP.csproj", "{E958305A-8985-4B1F-8D4D-0F394DB46929}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSE.PO.WEBAPI", "FSE.PO.WEBAPI\FSE.PO.WEBAPI.csproj", "{26633393-0D4A-4BDE-AD0D-7F71913A6345}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FSE.PO.SQLDB", "FSE.PO.SQLDB", "{CC279469-1C9D-4F68-9D2A-F79938A615FE}"
+	ProjectSection(SolutionItems) = preProject
+		FSE.PO.SQLDB\FSE.PO.SQLDB\01.CreateDatabase.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\01.CreateDatabase.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\02.CreateTable.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\02.CreateTable.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\03.MasterData.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\03.MasterData.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\30.01.AdditionalInfo.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\30.01.AdditionalInfo.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\30.02.AdditionalInfo_v2.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\30.02.AdditionalInfo_v2.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\40.01.fn_GenPKID.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\40.01.fn_GenPKID.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\50.01.sp_InsertPurchaseRecord.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\50.01.sp_InsertPurchaseRecord.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\50.02.sp_UpdatePurchaseRecord.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\50.02.sp_UpdatePurchaseRecord.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\50.03.sp_GetAllPurchaseRecord.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\50.03.sp_GetAllPurchaseRecord.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\50.04.sp_GetPurchaseRecord.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\50.04.sp_GetPurchaseRecord.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\50.05.sp_DeletePurchaseRecord.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\50.05.sp_DeletePurchaseRecord.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\50.06.sp_GetSupplierRecord.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\50.06.sp_GetSupplierRecord.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\50.07.sp_GetItemRecord.sql = FSE.PO.SQLDB\FSE.PO.SQLDB\50.07.sp_GetItemRecord.sql
+		FSE.PO.SQLDB\FSE.PO.SQLDB\FSE.PO.SQLDB.ssmssqlproj = FSE.PO.SQLDB\FSE.PO.SQLDB\FSE.PO.SQLDB.ssmssqlproj
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16813281-7AA7-400A-9F77-BAA9AA287D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16813281-7AA7-400A-9F77-BAA9AA287D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16813281-7AA7-400A-9F77-BAA9AA287D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16813281-7AA7-400A-9F77-BAA9AA287D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ACEF926-AD88-462D-8145-A813AA4D144D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACEF926-AD88-462D-8145-A813AA4D144D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACEF926-AD88-462D-8145-A813AA4D144D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ACEF926-AD88-462D-8145-A813AA4D144D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E958305A-8985-4B1F-8D4D-0F394DB46929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E958305A-8985-4B1F-8D4D-0F394DB46929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E958305A-8985-4B1F-8D4D-0F394DB46929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E958305A-8985-4B1F-8D4D-0F394DB46929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26633393-0D4A-4BDE-AD0D-7F71913A6345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26633393-0D4A-4BDE-AD0D-7F71913A6345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26633393-0D4A-4BDE-AD0D-7F71913A6345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26633393-0D4A-4BDE-AD0D-7F71913A6345}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14D301E1-90F9-463F-995C-9AA3E292C937}
+	EndGlobalSection
+EndGlobal

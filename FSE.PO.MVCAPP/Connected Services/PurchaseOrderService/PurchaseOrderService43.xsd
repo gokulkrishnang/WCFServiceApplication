@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/FSE.PO.SVCAPP.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/FSE.PO.SVCAPP.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPurchaseOrderEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseOrderEntity" nillable="true" type="tns:PurchaseOrderEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseOrderEntity" nillable="true" type="tns:ArrayOfPurchaseOrderEntity" />
+  <xs:complexType name="PurchaseOrderEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ITCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ITDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PODate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PONo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Qty" type="xs:int" />
+      <xs:element minOccurs="0" name="SuplName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuplNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PurchaseOrderEntity" nillable="true" type="tns:PurchaseOrderEntity" />
+  <xs:complexType name="ArrayOfSupplierEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupplierEntity" nillable="true" type="tns:SupplierEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSupplierEntity" nillable="true" type="tns:ArrayOfSupplierEntity" />
+  <xs:complexType name="SupplierEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SuplAddr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuplName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuplNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupplierEntity" nillable="true" type="tns:SupplierEntity" />
+  <xs:complexType name="ArrayOfItemEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemEntity" nillable="true" type="tns:ItemEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemEntity" nillable="true" type="tns:ArrayOfItemEntity" />
+  <xs:complexType name="ItemEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItRate" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemEntity" nillable="true" type="tns:ItemEntity" />
+</xs:schema>

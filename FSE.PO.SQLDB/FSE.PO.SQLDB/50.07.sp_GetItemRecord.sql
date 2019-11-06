@@ -1,0 +1,26 @@
+USE PODb;
+GO
+
+--EXEC dbo.sp_GetItemRecord
+
+--DROP PROCEDURE sp_GetItemRecord
+
+--CREATE PROCEDURE dbo.sp_GetItemRecord
+ALTER PROCEDURE dbo.sp_GetItemRecord
+AS
+BEGIN
+
+	SELECT ITCODE
+	 , ITDESC 
+	FROM dbo.ITEM 
+	ORDER BY ITCODE;
+
+END;
+GO
+
+USE PODB;
+GO
+
+/*
+SELECT ITCODE, ITDESC FROM dbo.ITEM ORDER BY ITCODE;
+*/

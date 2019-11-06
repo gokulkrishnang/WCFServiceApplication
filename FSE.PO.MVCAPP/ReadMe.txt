@@ -1,0 +1,11 @@
+﻿https://www.c-sharpcorner.com/UploadFile/4d9083/binding-dropdownlist-in-mvc-in-various-ways-in-mvc-with-data/
+https://www.aspsnippets.com/Articles/ASPNet-MVC-Add-Apply-CSS-Class-Styles-in-HtmlValidationMessageFor-method.aspx
+https://www.dotnetcurry.com/aspnet-mvc/1124/aspnet-mvc-bootstrap
+https://stackoverflow.com/questions/10994790/how-to-pass-list-from-controller-to-view-in-mvc-3
+https://www.codeproject.com/Questions/644226/How-to-consume-WCF-Service-using-MVC-4-Application
+https://dotnet-helpers.com/mvc/how-to-consume-wcf-service-in-mvc/
+https://www.c-sharpcorner.com/uploadfile/francissvk/crud-operations-in-asp-net-mvc-using-ado-net/
+https://code.msdn.microsoft.com/ASPNET-MVC-CRUD-Operation-4fe5c1bc
+https://www.completecsharptutorial.com/mvc-articles/insert-update-delete-in-asp-net-mvc-5-without-entity-framework.php
+https://www.tutlane.com/tutorial/aspnet-mvc/ado-net-crud-operations-insert-update-delete-in-asp-net-mvc-4-example
+http://www.compilemode.com/2015/10/bind-drop-downlist-in-asp-net-mvc-using-model-classg.html

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<br />
+<h4>Create New Purchase Order:</h4>
+<br />
+
+<form id="formCreateRecord" method="post" action="@Url.Action("InsertRecord")">
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <td style="width: 5px;">Supplier Name: </td>
+            <td style="width: 90px">@Html.DropDownList("Suppliers", "-- Supplier --")</td>
+        </tr>
+        <tr>
+            <td style="width: 20px;">PO Date: </td>
+            <td>
+                <input class="date-picker" />                
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 20px;">Item Name: </td>
+            <td style="width: 90px">@Html.DropDownList("Items", "-- Item --")</td>
+        </tr>
+        <tr>
+            <td style="width: 20px;">Quantity: </td>
+            <td style="width: 90px">@Html.TextBox("Quantity", "", new { @class = "form-control" })</td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit" name="action" />
+    <input type="submit" value="Cancel" name="action" />
+</form>

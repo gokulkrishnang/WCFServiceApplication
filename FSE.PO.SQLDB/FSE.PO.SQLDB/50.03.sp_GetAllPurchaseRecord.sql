@@ -1,0 +1,65 @@
+USE PODB;
+GO
+
+/*
+USE PODB;
+GO
+
+EXEC PODB.dbo.sp_GetAllPurchaseRecord
+*/
+
+ALTER PROCEDURE dbo.sp_GetAllPurchaseRecord
+AS
+BEGIN
+
+    SELECT PM.PONO
+        , PM.SUPLNO
+        , SL.SUPLNAME
+        , PD.ITCODE
+        , IT.ITDESC
+        , PD.QTY
+        , PM.PODATE
+    FROM POMASTER PM
+        INNER JOIN PODETAIL PD
+    ON PM.PONO = PD.PONO
+        INNER JOIN SUPPLIER SL
+    ON PM.SUPLNO = SL.SUPLNO
+        INNER JOIN ITEM IT
+    ON PD.ITCODE = IT.ITCODE;
+
+END;
+
+GO
+
+/*
+INSERT INTO POMASTER ([PONO], [PODATE], [SUPLNO]) SELECT dbo.fnGenPKID ('P', 1), '20190615','S001';
+
+--Entry to PO Detail
+INSERT INTO PODETAIL ([PONO], [ITCODE], [QTY]) VALUES ('P001', 'I001', 2); --P001 (PM) | I001 PEN | 2 - SUP1
+
+SELECT TOP 1 * FROM SUPPLIER (NoLock);
+SELECT TOP 1 * FROM ITEM (NoLock);
+SELECT TOP 1 * FROM POMASTER (NoLock);
+SELECT TOP 1 * FROM PODETAIL (NoLock);
+
+SELECT * FROM SUPPLIER (NoLock);
+SELECT * FROM ITEM (NoLock);
+SELECT * FROM POMASTER (NoLock);
+SELECT * FROM PODETAIL (NoLock);
+
+PONO	   PODATE                  SUPLNO	  ITCODE	  QTY
+P001       2019-06-15 00:00:00.000 S001       I001        2
+P002       2019-06-15 00:00:00.000 S001       I002        4
+P003       2019-06-15 00:00:00.000 S002       I001        8
+P004       2019-06-22 00:00:00.000 S001       I004        8
+P005       2019-06-23 00:00:00.000 S001       I004        4
+P006       2019-06-24 00:00:00.000 S003       I005        4
+
+PONO       PODATE                  SUPLNO	  SUPLNAME            ITCODE	  ITDESC  QTY
+P001       2019-06-15 00:00:00.000 S001       SUPPLIER-A          I001        PEN     2
+P002       2019-06-15 00:00:00.000 S001       SUPPLIER-A          I002        PENCIL  4
+P003       2019-06-15 00:00:00.000 S002       SUPPLIER-B          I001        PEN     8
+P004       2019-06-22 00:00:00.000 S001       SUPPLIER-A          I004        SCHOOL BAG       8
+P005       2019-06-23 00:00:00.000 S001       SUPPLIER-A          I004        SCHOOL BAG       4
+P006       2019-06-24 00:00:00.000 S003       SUPPLIER-C          I005        SHOES   4
+*/
